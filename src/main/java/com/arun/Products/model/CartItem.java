@@ -1,8 +1,9 @@
 package com.arun.Products.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,14 +15,19 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Document(collection = "cart_items")
 public class CartItem {
 
     @Id
     private String id;
 
-    private String username;      // user who added to cart
-    private String prodName;      // product name
-    @Min(1)
-    private Integer quantity;         // quantity selected
-    private double price;         // price per item
+    @Indexed(unique = true)                 // helps get cart items for a user
+    private String username;
+
+    @Indexed                 // faster lookup
+    private String prodName;
+
+    private Integer quantity;
+
+    private double price;
 }

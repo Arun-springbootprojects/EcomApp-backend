@@ -1,0 +1,79 @@
+# ===============================
+# BUILD FILES
+# ===============================
+target/
+build/
+out/
+
+# Include source-specific build directories
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ===============================
+# MAVEN
+# ===============================
+.mvn/
+!mvnw
+!mvnw.cmd
+
+# ===============================
+# SPRING BOOT
+# ===============================
+*.log
+*.class
+*.jar
+*.war
+
+# ===============================
+# SECURITY / SECRETS (VERY IMPORTANT)
+# ===============================
+application.properties
+src/main/resources/application.properties
+*.env
+.env
+.env.local
+.env.*.local
+
+# ===============================
+# DOCKER
+# ===============================
+.dockerignore
+docker-compose.yml
+.ignoredocker
+
+# ===============================
+# IDE FILES
+# ===============================
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# ===============================
+# OS FILES
+# ===============================
+.DS_Store
+Thumbs.db

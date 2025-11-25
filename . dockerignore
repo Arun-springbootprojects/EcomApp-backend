@@ -1,0 +1,89 @@
+# ============================================
+# Maven Build Outputs (Will rebuild in Docker)
+# ============================================
+target/
+!target/*.jar
+*.class
+
+# ============================================
+# Maven Wrapper JAR (Optional - Maven downloads it)
+# ============================================
+.mvn/wrapper/maven-wrapper.jar
+
+# ============================================
+# IDE Files (IntelliJ IDEA - I can see you're using this)
+# ============================================
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+out/
+
+# ============================================
+# Compiled Class Files
+# ============================================
+*.class
+
+# ============================================
+# Log Files
+# ============================================
+*.log
+logs/
+
+# ============================================
+# OS Generated Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Git Files (No need for version control in container)
+# ============================================
+.git/
+.gitignore
+.gitattributes
+
+# ============================================
+# Test Output (Optional - if you don't want test results in container)
+# ============================================
+# src/test/  (Uncomment if you don't want tests in container)
+
+# ============================================
+# Environment Files (SECURITY - Never include secrets!)
+# ============================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ============================================
+# Documentation (Optional)
+# ============================================
+README.md
+HELP.md
+*.md
+docs/
+
+# ============================================
+# Docker Files (Don't copy Docker files into container)
+# ============================================
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.cache/
